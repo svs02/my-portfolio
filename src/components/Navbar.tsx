@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="nav-container">
         <a href="#home" className="nav-logo" onClick={closeMenu}>
-          Portfolio
+          Taehyeok Lee's Portfolio
         </a>
         <button
           className={`hamburger ${isMenuOpen ? "active" : ""}`}

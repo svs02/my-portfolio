@@ -55,7 +55,7 @@ const values = [
   },
 ];
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <section id="about" className="section about">
       <div className="container">

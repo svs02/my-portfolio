@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-const ScrollToTop: React.FC = () => {
+const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   // 스크롤 위치에 따라 버튼 표시/숨김

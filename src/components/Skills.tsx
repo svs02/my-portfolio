@@ -1,6 +1,18 @@
 import React from "react";
+const skills = [
+  "React",
+  "TypeScript",
+  "NestJS",
+  "MongoDB",
+  "Angular",
+  "Node.js",
+  "JavaScript",
+  "RESTful APIs",
+  "Git",
+  "Tailwind CSS",
+];
 
-const Skills: React.FC = () => {
+const Skills = () => {
   return (
     <section id="skills" className="section skills">
       <div className="container">
@@ -45,4 +57,3 @@ const Skills: React.FC = () => {
 };
 
 export default Skills;
-
