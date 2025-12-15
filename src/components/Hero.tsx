@@ -11,8 +11,12 @@ const Hero = () => {
         <p className="hero-subtitle">
           Web developer with {new Date().getFullYear() - 2022} years of
           experience building scalable B2B systems for enterprise clients,
-          including Samsung, using <strong>Angular, React,</strong>
-          <strong>TypeScript, NestJS, and MongoDB.</strong>
+          including Samsung, using{" "}
+          <span className="tech-text tech-angular">Angular</span>,{" "}
+          <span className="tech-text tech-react">React</span>,{" "}
+          <span className="tech-text tech-typescript">TypeScript</span>,{" "}
+          <span className="tech-text tech-nestjs">NestJS</span>, and{" "}
+          <span className="tech-text tech-mongodb">MongoDB</span>.
         </p>
         <div className="hero-buttons">
           <a href="#projects" className="btn btn-primary">
@@ -20,6 +24,14 @@ const Hero = () => {
           </a>
           <a href="#contact" className="btn btn-secondary">
             Contact Me
+          </a>
+          <a
+            href="/resume.pdf"
+            className="btn btn-tertiary"
+            download
+            target="_blank"
+            rel="noopener noreferrer">
+            Download Resume
           </a>
         </div>
       </div>

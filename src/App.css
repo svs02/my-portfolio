@@ -162,6 +162,31 @@
   animation: fadeInUp 1s ease 0.2s both;
 }
 
+.hero-subtitle .tech-text {
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.hero-subtitle .tech-angular {
+  color: #DD0031;
+}
+
+.hero-subtitle .tech-react {
+  color: #61DAFB;
+}
+
+.hero-subtitle .tech-typescript {
+  color: #3178C6;
+}
+
+.hero-subtitle .tech-nestjs {
+  color: #E0234E;
+}
+
+.hero-subtitle .tech-mongodb {
+  color: #47A248;
+}
+
 .hero-subtitle-text {
   display: block;
   font-size: 1.25rem;
@@ -235,28 +260,44 @@
 }
 
 .btn-primary {
-  background-color: #ffd700;
-  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: 2px solid transparent;
 }
 
 .btn-primary:hover {
-  background-color: #ffed4e;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
 }
 
 .btn-secondary {
   background-color: transparent;
   color: white;
-  border: 2px solid white;
+  border: 2px solid rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
   border-color: #667eea;
+  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-tertiary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
 .scroll-indicator {
