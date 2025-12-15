@@ -1,7 +1,7 @@
+import { Code2, Palette, Zap } from "lucide-react";
+import { motion } from "motion/react";
 import React, { useState } from "react";
 import profileImage from "../assets/images/profile.png";
-import { motion } from "motion/react";
-import { Code2, Palette, Zap } from "lucide-react";
 
 export function ImageWithFallback(
   props: React.ImgHTMLAttributes<HTMLImageElement>

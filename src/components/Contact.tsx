@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   // React 19와 react-icons 호환성을 위한 타입 단언

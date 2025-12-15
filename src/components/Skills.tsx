@@ -1,16 +1,16 @@
 import React from "react";
-import {
-  SiReact,
-  SiTypescript,
-  SiNestjs,
-  SiMongodb,
-  SiAngular,
-  SiNodedotjs,
-  SiJavascript,
-  SiSwagger,
-  SiGit,
-} from "react-icons/si";
 import { IconType } from "react-icons";
+import {
+  SiAngular,
+  SiGit,
+  SiJavascript,
+  SiMongodb,
+  SiNestjs,
+  SiNodedotjs,
+  SiReact,
+  SiSwagger,
+  SiTypescript,
+} from "react-icons/si";
 
 const skills: Array<{ name: string; icon: IconType; color: string }> = [
   { name: "Angular", icon: SiAngular, color: "#DD0031" },

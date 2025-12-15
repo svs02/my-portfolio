@@ -1,107 +1,45 @@
-import React from "react";
+import { motion } from "motion/react";
+import ProjectCard from "./ProjectCard";
+
+const projects = [
+  {
+    title: "Portfolio Website",
+    description:
+      "Personal portfolio website showcasing my projects, skills, and experience. Built with modern React and TypeScript, featuring smooth animations and responsive design.",
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    image:
+      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0Zm9saW8lMjB3ZWJzaXRlfGVufDF8fHx8MTc2NDkxNzcwMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    isInProgress: true,
+  },
+];
 
 const Projects = () => {
   return (
-    <section id="projects" className="section projects">
+    <section id="projects" className="section projects-new">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
-        <div className="projects-grid">
-          <div className="project-card">
-            <div className="project-image">
-              <div className="project-overlay">
-                <h3>E-Commerce Platform</h3>
-                <p>React, TypeScript, Redux</p>
-                <div className="project-links">
-                  <a
-                    href="https://example.com"
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View Demo
-                  </a>
-                  <a
-                    href="https://github.com"
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="project-card">
-            <div className="project-image">
-              <div className="project-overlay">
-                <h3>Social Media Dashboard</h3>
-                <p>Next.js, TailwindCSS</p>
-                <div className="project-links">
-                  <a
-                    href="https://example.com"
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View Demo
-                  </a>
-                  <a
-                    href="https://github.com"
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="project-card">
-            <div className="project-image">
-              <div className="project-overlay">
-                <h3>Task Management App</h3>
-                <p>React, Firebase, Material-UI</p>
-                <div className="project-links">
-                  <a
-                    href="https://example.com"
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View Demo
-                  </a>
-                  <a
-                    href="https://github.com"
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="project-card">
-            <div className="project-image">
-              <div className="project-overlay">
-                <h3>Weather Forecast App</h3>
-                <p>React, API Integration</p>
-                <div className="project-links">
-                  <a
-                    href="https://example.com"
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View Demo
-                  </a>
-                  <a
-                    href="https://github.com"
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="projects-header">
+          <h2 className="section-title">Featured Projects</h2>
+          <p className="projects-subtitle">
+            These projects are demos reconstructed from features I actually
+            developed in B2B systems, with personal information and company
+            assets removed. All code has been personally rewritten from scratch.
+          </p>
+        </motion.div>
+
+        <div className="projects-grid-new">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={project.title}
+              {...project}
+              delay={index * 0.1}
+              isInProgress={project.isInProgress}
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -109,4 +47,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
