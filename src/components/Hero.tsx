@@ -1,4 +1,15 @@
+import resumePdf from "../assets/files/TaeHyeok_Lee_Resume.pdf";
+
 const Hero = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = resumePdf;
+    link.download = "TaeHyeok_Lee_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="hero">
       <div className="hero-content">
@@ -25,14 +36,9 @@ const Hero = () => {
           <a href="#contact" className="btn btn-secondary">
             Contact Me
           </a>
-          <a
-            href="/resume.pdf"
-            className="btn btn-tertiary"
-            download
-            target="_blank"
-            rel="noopener noreferrer">
+          <button onClick={handleDownload} className="btn btn-tertiary">
             Download Resume
-          </a>
+          </button>
         </div>
       </div>
       <div className="scroll-indicator">
