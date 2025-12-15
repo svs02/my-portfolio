@@ -9,7 +9,6 @@ import {
   SiJavascript,
   SiSwagger,
   SiGit,
-  SiTailwindcss,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
