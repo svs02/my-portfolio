@@ -1,15 +1,28 @@
 import React from "react";
-const skills = [
-  "React",
-  "TypeScript",
-  "NestJS",
-  "MongoDB",
-  "Angular",
-  "Node.js",
-  "JavaScript",
-  "RESTful APIs",
-  "Git",
-  "Tailwind CSS",
+import {
+  SiReact,
+  SiTypescript,
+  SiNestjs,
+  SiMongodb,
+  SiAngular,
+  SiNodedotjs,
+  SiJavascript,
+  SiSwagger,
+  SiGit,
+  SiTailwindcss,
+} from "react-icons/si";
+import { IconType } from "react-icons";
+
+const skills: Array<{ name: string; icon: IconType; color: string }> = [
+  { name: "Angular", icon: SiAngular, color: "#DD0031" },
+  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "NestJS", icon: SiNestjs, color: "#E0234E" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "RESTful APIs", icon: SiSwagger, color: "#85EA2D" },
+  { name: "Git", icon: SiGit, color: "#F05032" },
 ];
 
 const Skills = () => {
@@ -17,39 +30,22 @@ const Skills = () => {
     <section id="skills" className="section skills">
       <div className="container">
         <h2 className="section-title">Skills</h2>
-        <div className="skills-grid">
-          <div className="skill-card">
-            <div className="skill-icon">⚛️</div>
-            <h3>React / Next.js</h3>
-            <p>
-              Building SPA and SSR applications using modern React ecosystem
-            </p>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">💎</div>
-            <h3>TypeScript</h3>
-            <p>Writing scalable code with type safety</p>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">🎨</div>
-            <h3>CSS / Styled Components</h3>
-            <p>Implementing responsive design and modern styling</p>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">🚀</div>
-            <h3>Performance</h3>
-            <p>Web performance optimization and UX improvement</p>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">📱</div>
-            <h3>Responsive Design</h3>
-            <p>Perfect user experience across all devices</p>
-          </div>
-          <div className="skill-card">
-            <div className="skill-icon">🔧</div>
-            <h3>Modern Tools</h3>
-            <p>Utilizing latest development tools like Git, Webpack, Vite</p>
-          </div>
+        <div className="skills-badges">
+          {skills.map((skill) => {
+            // React 19와 react-icons 호환성을 위한 타입 단언
+            const IconComponent = skill.icon as React.FC<{
+              className?: string;
+            }>;
+            return (
+              <div
+                key={skill.name}
+                className="skill-badge"
+                data-tooltip={skill.name}
+                style={{ "--skill-color": skill.color } as React.CSSProperties}>
+                <IconComponent className="skill-icon" />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

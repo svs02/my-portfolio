@@ -418,6 +418,100 @@
   background-color: #0a0a0a;
 }
 
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.skill-badge {
+  position: relative;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1e1e1e 0%, #252525 100%);
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  --skill-color: #e0e0e0;
+}
+
+.skill-badge .skill-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--skill-color);
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  background: linear-gradient(135deg, #252525 0%, #2a2a2a 100%);
+  border-color: var(--skill-color);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 5px 20px color-mix(in srgb, var(--skill-color) 40%, transparent);
+}
+
+.skill-badge:hover .skill-icon {
+  color: var(--skill-color);
+  transform: scale(1.15);
+}
+
+.skill-badge::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 0.5rem 0.75rem;
+  background-color: #667eea;
+  color: white;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.skill-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2px);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #667eea;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.skill-badge:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-12px);
+}
+
+.skill-badge:hover::after {
+  opacity: 1;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -442,7 +536,6 @@
 
 .skill-icon {
   font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
 .skill-card h3 {
