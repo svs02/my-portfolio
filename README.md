@@ -7,4 +7,4 @@ My primary focus is on **React ⚛️, Angular 🅰️, TypeScript**, and **clea
 with hands-on experience collaborating on real-world production systems.
 
 ## Portfolio
-👉 [https://svs02.github.io/porfolio/](https://svs02.github.io/porfolio/)
+👉 [https://svs02.github.io/my-portfolio/](https://svs02.github.io/my-portfolio/)
