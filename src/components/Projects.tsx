@@ -3,13 +3,13 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
-    title: "Portfolio Website",
+    title: "Violin Academy Platform",
     description:
-      "Personal portfolio website showcasing my projects, skills, and experience. Built with modern React and TypeScript, featuring smooth animations and responsive design.",
-    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0Zm9saW8lMjB3ZWJzaXRlfGVufDF8fHx8MTc2NDkxNzcwMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    isInProgress: true,
+      "A comprehensive promotion and community website for a violin academy. Features admin authentication, gallery management (CRUD), and secure image uploads. Optimized for mobile with a responsive Korean UI.",
+    techStack: ["Next.js", "TypeScript", "Mantine UI", "Express", "MongoDB", "Fly.io", "Vercel"],
+    image: process.env.PUBLIC_URL + "/cergy.png",
+    link: "https://cergymusic.com/",
+    isInProgress: false,
   },
 ];
 
@@ -23,11 +23,11 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="projects-header">
-          <h2 className="section-title">Featured Projects</h2>
+          <h2 className="section-title">Personal Projects</h2>
           <p className="projects-subtitle">
-            These projects are demos reconstructed from features I actually
-            developed in B2B systems, with personal information and company
-            assets removed. All code has been personally rewritten from scratch.
+            These are personal side projects built to explore modern technologies
+            and demonstrate my passion for development. Each project is created
+            from scratch with a focus on clean code and intuitive design.
           </p>
         </motion.div>
 

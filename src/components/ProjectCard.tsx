@@ -10,6 +10,7 @@ interface ProjectCardProps {
   image: string;
   delay?: number;
   isInProgress?: boolean;
+  link?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,6 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   techStack,
   image,
+  link,
   delay = 0,
   isInProgress = false,
 }) => {
@@ -51,10 +53,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           ))}
         </div>
 
-        <button className="project-view-btn">
-          View more
-          <ExternalLink className="btn-icon" />
-        </button>
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-view-btn">
+            Visit Website
+            <ExternalLink className="btn-icon" />
+          </a>
+        ) : (
+          <button className="project-view-btn">
+            View more
+            <ExternalLink className="btn-icon" />
+          </button>
+        )}
       </div>
     </motion.div>
   );
