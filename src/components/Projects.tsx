@@ -11,6 +11,15 @@ const projects = [
     link: "https://cergymusic.com/",
     isInProgress: false,
   },
+  {
+    title: "Skin Diary",
+    description:
+      "A personal daily logging app for tracking facial changes and lifestyle habits. Features an interactive date slider for comparing past and present skin conditions. Built with a serverless architecture and optimized with client-side image processing.",
+    techStack: ["Next.js", "TypeScript", "Firebase Auth", "Firestore", "Firebase Storage", "Vercel"],
+    image: process.env.PUBLIC_URL + "/skindiary.gif",
+    link: "https://www.skindiary.net/",
+    isInProgress: false,
+  },
 ];
 
 const Projects = () => {
